@@ -19,6 +19,9 @@ public class LoginPage extends BaseClass {
 		WebElement loginbtn;
 		@FindBy(xpath="//h1[@class='md:ml-[15px] text-secondary text-xl font-medium leading-6 tracking-wide']")
 		WebElement dashboardtext;
+		@FindBy(xpath="//div[@id='notistack-snackbar']")
+		WebElement message;
+		
 		public LoginPage(WebDriver driver) {
 			// TODO Auto-generated constructor stub
 			this.driver= driver;
@@ -41,6 +44,10 @@ public class LoginPage extends BaseClass {
 		{
 			return dashboardtext;
 		}
+		public WebElement togetmessage()
+		{
+			return message;
+		}
 		
 		public void loginfun()
 		{
@@ -48,6 +55,18 @@ public class LoginPage extends BaseClass {
 			username.sendKeys("08022024");
 			password.sendKeys("Tester@2024");
 			act.click(driver, loginbtn);
+		}
+		public void invalidLoginfun()
+		{
+			username.click();
+			username.sendKeys("12345");
+			password.sendKeys("tester@2023");
+			act.click(driver, loginbtn);
+		}
+		public String togetAlertText()
+		{
+			String msg=message.getText();
+			return msg;
 		}
 
 	

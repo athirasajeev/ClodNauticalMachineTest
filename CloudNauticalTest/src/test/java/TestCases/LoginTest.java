@@ -22,6 +22,11 @@ public class LoginTest extends BaseClass {
 		Assert.assertEquals(actual, expected);
 	}
 	
+	  @Test public void invalidLogin() { lp.invalidLoginfun(); String
+	  expected="Invalid Username or Password"; String actual=lp.togetAlertText();
+	  Assert.assertEquals(actual, expected); }
+	 
+	
 	
 	
 }

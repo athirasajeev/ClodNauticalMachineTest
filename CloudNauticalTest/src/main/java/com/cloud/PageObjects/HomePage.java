@@ -22,6 +22,8 @@ public class HomePage extends BaseClass {
 	WebElement search;
 	
 	
+
+	
 	public HomePage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver= driver;
@@ -40,6 +42,7 @@ public class HomePage extends BaseClass {
 	{
 		return Technical;
 	}
+	
 	public void clickSettings()
 	{
 		act.click(driver, Explorer);
@@ -56,5 +59,6 @@ public class HomePage extends BaseClass {
 	{
 		act.click(driver, search);
 	}
+	
 
 }

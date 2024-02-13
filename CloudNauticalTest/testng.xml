@@ -8,6 +8,9 @@
       
       <class name="TestCases.LoginTest"/>
       <class name="TestCases.HomeTest"/>
+      <class name="TestCases.TechnicalModuleTest"/>
+
+      
 
       
 </classes>
